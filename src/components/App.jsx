@@ -44,7 +44,7 @@ export class App extends Component {
         contact => contact.name.toLowerCase() === nameToLowerCase || contact.number === data.number
       )
     ) {
-      alert(`${data.name}  ${data.number} is in the contact list`);
+      alert(`${data.name}  ${data.number} is already in contacts`);
       return;
     }
 
@@ -75,7 +75,7 @@ export class App extends Component {
         onDeletContacts={this.deleteContacts}
         />
         ) : (
-          <alert>you have no contacts</alert>
+          <alert>No contacts in phone book</alert>
         )} 
       </div>
     )
