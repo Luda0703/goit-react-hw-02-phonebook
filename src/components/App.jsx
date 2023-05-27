@@ -4,6 +4,8 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 
+import { Container } from './Container.styled';
+
 
 
 export class App extends Component {
@@ -64,7 +66,7 @@ export class App extends Component {
 
     const visibleFilter = this.visibleContacts();
     return (
-      <div>
+      <Container>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact}/>
         <h2>Contacts  {contacts.length}</h2>
@@ -75,9 +77,9 @@ export class App extends Component {
         onDeletContacts={this.deleteContacts}
         />
         ) : (
-          <alert>No contacts in phone book</alert>
+          <p>No contacts in phone book</p>
         )} 
-      </div>
+      </Container>
     )
   }
  
