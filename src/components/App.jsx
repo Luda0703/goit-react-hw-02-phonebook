@@ -19,10 +19,6 @@ export class App extends Component {
     filter: '',
     
   }
- 
-  // formSubmitHandler = data => {
-  //   console.log(data)
-  // }
 
   filterChange = e => {
     this.setState({filter: e.target.value})
@@ -43,8 +39,8 @@ export class App extends Component {
 
     if (
       this.state.contacts.find(
-        contact => contact.name.toLowerCase() === nameToLowerCase || contact.number === data.number
-      )
+        contact => contact.name.toLowerCase() === nameToLowerCase || 
+        contact.number === data.number)
     ) {
       alert(`${data.name}  ${data.number} is already in contacts`);
       return;
@@ -77,10 +73,9 @@ export class App extends Component {
         onDeletContacts={this.deleteContacts}
         />
         ) : (
-          <P>No contacts in phone book</P>
+          <P>No contacts in phonebook</P>
         )} 
       </Container>
     )
   }
- 
 };

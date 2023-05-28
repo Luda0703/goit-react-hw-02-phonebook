@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+export const Div = styled.div`
+`
 export const Label = styled.label`
 display: blok;
 text-align: start;
