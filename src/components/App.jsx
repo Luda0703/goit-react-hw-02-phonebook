@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 
-import { Container } from './Container.styled';
+import { Container, H1, H2, P } from './Container.styled';
 
 
 
@@ -67,9 +67,9 @@ export class App extends Component {
     const visibleFilter = this.visibleContacts();
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <H1>Phonebook</H1>
         <ContactForm onSubmit={this.addContact}/>
-        <h2>Contacts  {contacts.length}</h2>
+        <H2>Contacts  {contacts.length}</H2>
         <Filter value={filter} onChange={this.filterChange}/>
         {contacts.length ? (
         <ContactList 
@@ -77,7 +77,7 @@ export class App extends Component {
         onDeletContacts={this.deleteContacts}
         />
         ) : (
-          <p>No contacts in phone book</p>
+          <P>No contacts in phone book</P>
         )} 
       </Container>
     )

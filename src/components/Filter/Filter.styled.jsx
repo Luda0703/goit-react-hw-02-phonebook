@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Form = styled.form`
-
-`
 export const Label = styled.label`
 display: blok;
 text-align: start;
@@ -27,11 +24,4 @@ border: 1px solid #FFDAB9;
     color: #e74c3c;
     border: 1px solid #FFDAB9;
 
-`
-export const Button = styled.button`
-background-color: #2F4F4F;
-color: #FFFFFF;
-width: 100px;
-border-radius:7px;
-padding: 8px;
 `
